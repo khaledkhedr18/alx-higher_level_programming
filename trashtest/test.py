@@ -1,3 +1,3 @@
-name = "jane"
-age = "25"
-print("hello, %s. you're %s years old!") % (name, age)
+#!/usr/bin/python3
+number = 98
+print(f"{number} Battery street")
