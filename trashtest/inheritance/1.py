@@ -1,15 +1,12 @@
 class Creature:
-	def __init__(self, birthType="Unkown", appearance="Unkown", Bloods="Unknown"):
+	def __init__(self, name, species, blood):
+		self.name = name
+		self.species = species
+		self.blood = blood
 
-		self.appearance = appearance
-		self.birth = birthType
-		self.blood = Bloods
-
-		@property
-		def birthtype(self):
-			return self.birthType
-		
-
+	@property
+	def birthtype(self):
+		return self.birthtype
 
 class Human(Creature):
 	pass
