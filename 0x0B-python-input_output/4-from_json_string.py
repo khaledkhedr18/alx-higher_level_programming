@@ -6,7 +6,6 @@
 import json
 
 
-
 def from_json_string(json_string):
     """
     this function returns an object (python data structure)
