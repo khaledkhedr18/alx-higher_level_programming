@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import json
 """
     this function returns an object (python data structure)
     represented by a JSON string
 """
+import json
+
 
 
 def from_json_string(json_string):
