@@ -1,7 +1,10 @@
 import json
 
-jsonnn = json.dumps([1, 2, 3, {'4': 5}, {'5': 6}], separators=(',', ': '))
+with open('states.json') as f:
+	data = json.load(f)
 
-print(jsonnn)
+for state in data['states']:
+	del state['area_codes']
 
-khaledjson = json.loads()
+with open('new_states.json', 'w') as f:
+	json.dump(data, f, indent=2)
