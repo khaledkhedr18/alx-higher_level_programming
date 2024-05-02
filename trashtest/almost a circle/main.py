@@ -1,22 +1,14 @@
-""" Doc """
+""" 16-main """
 from models.rectangle import Rectangle
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(10, 10, 10, 10)
-    print(r1)
-
-    r1.update(89)
-    print(r1)
-
-    r1.update(89, 2)
-    print(r1)
-
-    r1.update(89, 2, 3)
-    print(r1)
-
-    r1.update(89, 2, 3, 4)
-    print(r1)
-
-    r1.update(89, 2, 3, 4, 5)
-    print(r1)
+    list_input = [
+        {'id': 89, 'width': 10, 'height': 4}, 
+        {'id': 7, 'width': 1, 'height': 7}
+    ]
+    json_list_input = Rectangle.to_json_string(list_input)
+    list_output = Rectangle.from_json_string(json_list_input)
+    print("[{}] {}".format(type(list_input), list_input))
+    print("[{}] {}".format(type(json_list_input), json_list_input))
+    print("[{}] {}".format(type(list_output), list_output))
